@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>T1</title>
+    <title>RAWBONE</title>
 
     <style>
         html,
@@ -96,8 +96,6 @@
 				directionalLight.position.set( 0, 0, 1 );
 				scene.add( directionalLight );
                 
-                var effect = new THREE.AnaglyphEffect(renderer, window.innerWidth, window.innerHeight);
-                
 				// texture
 
 				var manager = new THREE.LoadingManager();
@@ -141,6 +139,7 @@
 
 				window.addEventListener( 'resize', onWindowResize, false );
 
+                var effect = new THREE.AnaglyphEffect(renderer, window.innerWidth, window.innerHeight);
 			}
 
 			function onWindowResize() {
@@ -170,7 +169,7 @@
                 obj.rotation.y += (0.2*(Math.PI / 180));
                 obj.rotation.y %=360;
                 
-				renderer.render( scene, camera );
+                renderer.render( scene, camera );
 			}
     </script>
 
